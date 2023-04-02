@@ -36,7 +36,16 @@ nav ul li{
 
 }
 .container{
-    min-height: 75vh;
+    min-height: 65vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;  
+    padding: 34px;
+    background-image: url('cover.jpg');
 }
 .bottom{
     position: sticky;
@@ -47,10 +56,28 @@ nav ul li{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+}
+.icons{
+    margin-top: 20px;
+}
+.icons{
+    cursor: pointer;
 }
 
 #myProgressBar{
     width: 80vw;
     text-align: center;
+}
+.songiteam{
+    height: 5rem;
+    display: flex;
+    background-color: white;
+    width: 100%;
+        justify-content: space-around;
+        align-items: center;
+}
+.songcover{
+    height: 3rem;
+    width: auto;
+    
 }
