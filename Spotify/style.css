@@ -67,7 +67,9 @@ nav ul li{
 #myProgressBar{
     width: 80vw;
     text-align: center;
+    cursor: pointer;
 }
+
 .songiteam{
     height: 3.5rem;
     display: flex;
@@ -89,4 +91,13 @@ nav ul li{
 }
 .timestamp i{
     cursor: pointer;
+}
+.songinfo{
+    position: absolute;
+    left: 185px;
+    font-family: 'Varela Round', sans-serif;
+}
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 }
