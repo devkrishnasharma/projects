@@ -69,15 +69,24 @@ nav ul li{
     text-align: center;
 }
 .songiteam{
-    height: 5rem;
+    height: 3.5rem;
     display: flex;
     background-color: white;
     width: 100%;
+    color: black;
         justify-content: space-around;
         align-items: center;
+        border-radius: 34px;
 }
 .songcover{
     height: 3rem;
     width: auto;
-    
+    margin: 0, 20, 0;
+    border-radius: 34px;
+}
+.timestamp{
+    margin: 0, 23px;
+}
+.timestamp i{
+    cursor: pointer;
 }
