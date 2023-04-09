@@ -22,10 +22,10 @@ let songs = [
    {songName: "Unholy", filepath: "song/1.mp3", coverPath: "covers/10.jpg"}, 
 
 ]
-songiteams.forEach((element, 1)=>{
-console.log(element, i);
-element.getElementByTagName("img")[0].src = songs[i].filepath;
-})
+songiteams.forEach((element, i) => {
+    console.log(element, i);
+    element.getElementsByTagName("img")[0].src = songs[i].filepath;
+  });
 
 //audioElement.play()
 
