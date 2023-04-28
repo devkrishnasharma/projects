@@ -1,4 +1,5 @@
 import pyttsx3
+import speech_recognition as sr
 import datetime
 
 engine = pyttsx3.init('sapi5')
@@ -25,6 +26,30 @@ def wishMe():
       speak("I am Your Virtual Assistant. Please Tell Me How Can I Help You")     
    
 
+def takecommand():
+
+   #It takes microphone input from the user  and resturn string output
+   r = sr.recognizers()
+   with sr.microsphone() as source:
+       print("Listening...")
+       r.pause_threshold = 1
+       audio = r.listen(source)
+
+   try:
+        print("Recognizing...")    
+        query = r.recognize_google(audio, language='en-in') #Using google for voice recognition.
+        print(f"User said: {query}\n")  #User query will be printed.
+
+   except Exception as e:
+           # print(e)
+            print("Say that again please.......")
+            return "None"
+   return query
+   
+
+
 
 if __name__ == "__main__":
       wishMe()
+      takecommand()
+      
