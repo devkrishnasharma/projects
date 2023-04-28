@@ -30,10 +30,11 @@ def takecommand():
 
    #It takes microphone input from the user  and resturn string output
    r = sr.recognizers()
-   with sr.microsphone() as source:
-       print("Listening...")
-       r.pause_threshold = 1
-       audio = r.listen(source)
+   
+   with sr.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 1
+        audio = r.listen(source)
 
    try:
         print("Recognizing...")    
@@ -41,9 +42,9 @@ def takecommand():
         print(f"User said: {query}\n")  #User query will be printed.
 
    except Exception as e:
-           # print(e)
-            print("Say that again please.......")
-            return "None"
+        # print(e)    
+        print("Say that again please...")   #Say that again will be printed in case of improper voice 
+        return "None" #None string will be returned
    return query
    
 
@@ -52,4 +53,4 @@ def takecommand():
 if __name__ == "__main__":
       wishMe()
       takecommand()
-      
+
